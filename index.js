@@ -355,7 +355,7 @@ exports.pipe = function() {
     throw new Error('pipe(): First stream must be readable.');
   }
 
-  if (!isStream.isWritable(args[0])) {
+ if (!isStream.isWritable(args[args.length-1])) {
     throw new Error('pipe(): Last stream must be writable.');
   }
 
